@@ -223,12 +223,24 @@ namespace CallButler.Manager.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Local")]
-        public global::CallButler.ManagementInterface.CallButlerManagementInterfaceType ManagementInterfaceType {
-            get {
-                return ((global::CallButler.ManagementInterface.CallButlerManagementInterfaceType)(this["ManagementInterfaceType"]));
+/*
+        //修改WOSI.CallButler.ManagementInterface.CallButlerManagementInterfaceType的调用空间名
+        public global::WOSI.CallButler.ManagementInterface.CallButlerManagementInterfaceType ManagementInterfaceType 
+        {
+            get 
+            {
+                return ((global::WOSI.CallButler.ManagementInterface.CallButlerManagementInterfaceType)(this["ManagementInterfaceType"]));
             }
         }
-        
+*/
+        public global::WOSI.CallButler.ManagementInterface.CallButlerManagementInterfaceType ManagementInterfaceType
+        {
+            get
+            {
+                return ((global::WOSI.CallButler.ManagementInterface.CallButlerManagementInterfaceType)(this["ManagementInterfaceType"]));
+            }
+        }
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]

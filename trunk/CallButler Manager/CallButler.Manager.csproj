@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.50727</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6B96D269-9885-4007-9B04-3E15909C335D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -62,8 +62,9 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -754,6 +755,14 @@
     <None Include="Resources\gear_find_48_shadow.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\CallButler.Data\CallButler.Data.csproj">
+      <Project>{D1AE6677-AEA4-4D16-9EA1-BCEA0C4B13BA}</Project>
+      <Name>CallButler.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\CallButler.ManagementInterface\CallButler.ManagementInterface.csproj">
+      <Project>{B1DE2AA9-A6B7-4B85-A4C1-A62B8C6140FF}</Project>
+      <Name>CallButler.ManagementInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Controls.Diagram\Controls.Diagram.csproj">
       <Project>{7F536F29-7BB7-49BD-B920-6448B8D4BAB9}</Project>
       <Name>Controls.Diagram</Name>
@@ -774,18 +783,9 @@
       <Project>{48E06473-9007-4DA4-AD30-C97B702EFCC2}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Common\CallButler.Data\CallButler.Data.csproj">
-      <Project>{D1AE6677-AEA4-4D16-9EA1-BCEA0C4B13BA}</Project>
-      <Name>CallButler.Data</Name>
-      <Private>True</Private>
-    </ProjectReference>
     <ProjectReference Include="..\Common\CallButler.ExceptionManagement\CallButler.ExceptionManagement.csproj">
       <Project>{3D19D5D5-D1DE-4BD2-AF09-B285429D1DCA}</Project>
       <Name>CallButler.ExceptionManagement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\CallButler.ManagementInterface\CallButler.ManagementInterface.csproj">
-      <Project>{B1DE2AA9-A6B7-4B85-A4C1-A62B8C6140FF}</Project>
-      <Name>CallButler.ManagementInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Common\CallButler.Manager.Controls\CallButler.Manager.Controls.csproj">
       <Project>{852CA2FA-FA8E-43CA-ACAE-20AE01AB4186}</Project>
