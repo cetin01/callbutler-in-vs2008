@@ -5,6 +5,6 @@
     Renaming the file extension or editing the content of this file may   
     cause the file to be unrecognizable by the program.
 -->
-<GenericObjectDataSource DisplayName="CallButlerDataset" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
-   <TypeInfo>CallButler.ManagementInterface.ManagementServices.CallButlerDataset, Web References.ManagementServices.Reference.cs, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</TypeInfo>
+<GenericObjectDataSource DisplayName="AudioCodecInformation" Version="1.0" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+   <TypeInfo>WOSI.CallButler.ManagementInterface.ManagementServices.AudioCodecInformation</TypeInfo>
 </GenericObjectDataSource>
