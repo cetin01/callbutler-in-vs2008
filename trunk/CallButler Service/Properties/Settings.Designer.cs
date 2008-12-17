@@ -334,7 +334,7 @@ namespace CallButler.Service.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mailer@callbutler.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("tws67@21cn.com")]
         public string SMTPEmailFrom {
             get {
                 return ((string)(this["SMTPEmailFrom"]));
@@ -463,7 +463,7 @@ namespace CallButler.Service.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("..\\Management\\CallButler Manager.exe")]
+        [global::System.Configuration.DefaultSettingValueAttribute("..\\Manager\\CallButler Manager.exe")]
         public string CallButlerManagementAppLocation {
             get {
                 return ((string)(this["CallButlerManagementAppLocation"]));

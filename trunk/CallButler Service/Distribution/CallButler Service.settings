@@ -75,7 +75,7 @@
   <Setting Name="WelcomeGreetingDelay">1000</Setting>
   <Setting Name="LicenseKey" />
   <Setting Name="RecordVolume">255</Setting>
-  <Setting Name="FirstTimeRun">True</Setting>
+  <Setting Name="FirstTimeRun">False</Setting>
   <Setting Name="SMTPServer" />
   <Setting Name="SpeechVolume">35</Setting>
   <Setting Name="ProductID">CB-ULM-1B</Setting>

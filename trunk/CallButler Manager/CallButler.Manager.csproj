@@ -136,6 +136,7 @@
       <DependentUpon>EditionChooserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -204,6 +205,7 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AssignPasswordForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AssignPasswordForm.Designer.cs">
       <DependentUpon>AssignPasswordForm.cs</DependentUpon>
@@ -227,6 +229,7 @@
       <DependentUpon>ExtensionEditorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\GreetingForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\GreetingForm.Designer.cs">
       <DependentUpon>GreetingForm.cs</DependentUpon>
@@ -238,16 +241,19 @@
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\InitialProviderDialog.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\InitialProviderDialog.Designer.cs">
       <DependentUpon>InitialProviderDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\LangageSelectionForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LangageSelectionForm.Designer.cs">
       <DependentUpon>LangageSelectionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\OutlookContactForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\OutlookContactForm.Designer.cs">
       <DependentUpon>OutlookContactForm.cs</DependentUpon>
@@ -271,16 +277,19 @@
       <DependentUpon>ScriptScheduleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ShutownForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ShutownForm.Designer.cs">
       <DependentUpon>ShutownForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SMTPServerForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SMTPServerForm.Designer.cs">
       <DependentUpon>SMTPServerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\VersionCheckerForm.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\VersionCheckerForm.Designer.cs">
       <DependentUpon>VersionCheckerForm.cs</DependentUpon>
