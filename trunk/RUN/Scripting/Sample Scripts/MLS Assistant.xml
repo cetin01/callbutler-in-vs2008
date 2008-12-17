@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IML Description="MLS Assistant">
+	<GlobalPage />
+	<Page ID="e0892939-3c90-4e7d-a872-7ed14252752c" Description="Welcome">
+		<SpeakText>Hello. My name is Millie, your virtual MLS assistant.</SpeakText>
+		<GotoPage PageID="2dc7d9cc-bd46-4876-bbab-c11c57c03329" PageName="Enter Address or Number" />
+	</Page>
+	<Page ID="2dc7d9cc-bd46-4876-bbab-c11c57c03329" Description="Enter Address or Number">
+		<SpeakText>Please enter an address number or MLS number for a property.</SpeakText>
+		<DTMFEvent Digits="(?&lt;Number&gt;\d+)">
+			<DatabaseQuery ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=@ScriptFileDirectory@\Data\MLS Database.mdb;Persist Security Info=False" NoRecords="false">SELECT * FROM MLS WHERE AddressNum LIKE '#Number#%' OR MLSNum LIKE '#Number#%'</DatabaseQuery>
+			<GotoPage PageID="92de2b5c-d8a2-4bc0-b76c-5ebdbdc52cf8" PageName="Lookup and Confirmation" />
+		</DTMFEvent>
+	</Page>
+	<Page ID="92de2b5c-d8a2-4bc0-b76c-5ebdbdc52cf8" Description="Lookup and Confirmation">
+		<DatabaseQueryNextRecord />
+		<SpeakText>Are you looking for the property located at #DB.AddressNum# #DB.Address#?</SpeakText>
+		<SpeakText>Press 1 for yes.
+Press 2 for no.</SpeakText>
+		<DTMFEvent Digits="1">
+			<GotoPage PageID="d4e7c633-70e1-4e1b-994c-56a993797b99" PageName="Property Description" />
+		</DTMFEvent>
+		<DTMFEvent Digits="2">
+			<GotoPage PageID="92de2b5c-d8a2-4bc0-b76c-5ebdbdc52cf8" PageName="Lookup and Confirmation" />
+		</DTMFEvent>
+		<DatabaseQueryNoMoreRecords>
+			<SpeakText>I'm sorry, but I can't find a property that matches your entry. Let's try again.</SpeakText>
+			<GotoPage PageID="2dc7d9cc-bd46-4876-bbab-c11c57c03329" PageName="Enter Address or Number" />
+		</DatabaseQueryNoMoreRecords>
+	</Page>
+	<Page ID="d4e7c633-70e1-4e1b-994c-56a993797b99" Description="Property Description">
+		<SpeakText>#DB.Description#</SpeakText>
+		<SpeakText>The square footage is #DB.SF#.</SpeakText>
+		<SpeakText>This property is being offered at #DB.Price#.</SpeakText>
+		<SpeakText>To schedule a showing of this property, please press 1.</SpeakText>
+		<SpeakText>To have directions to this property text messaged to you, please press 2.</SpeakText>
+		<SpeakText>To return to the main menu, please press 3.</SpeakText>
+		<DTMFEvent Digits="2">
+			<SpeakText>Thank you. A text message with directions and info on this property will be sent to you shortly.</SpeakText>
+		</DTMFEvent>
+		<DTMFEvent Digits="3">
+			<GotoPage PageID="2dc7d9cc-bd46-4876-bbab-c11c57c03329" PageName="Enter Address or Number" />
+		</DTMFEvent>
+	</Page>
+</IML>

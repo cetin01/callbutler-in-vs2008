@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IML Description="Employee Directory">
+	<GlobalPage />
+	<Page ID="917f2646-40de-475c-8b5d-056775745ad8" Description="Name Search">
+		<SpeakText>Please enter the first three letters of the person you are trying to reach.</SpeakText>
+		<DTMFEvent Digits="(?&lt;SearchNumber&gt;\d\d\d)">
+			<GotoPage PageID="493c5e74-99fb-41c5-bf0f-fad60f3f5c32" PageName="Query Database" />
+		</DTMFEvent>
+		<InvalidInputEvent>
+			<SpeakText>I'm sorry but I didn't understand your request. Please try again.</SpeakText>
+			<GotoPage PageID="917f2646-40de-475c-8b5d-056775745ad8" PageName="Name Search" />
+		</InvalidInputEvent>
+	</Page>
+	<Page ID="493c5e74-99fb-41c5-bf0f-fad60f3f5c32" Description="Query Database">
+		<DatabaseQuery ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=@ScriptFileDirectory@\Data\Company Directory.mdb;Persist Security Info=False" NoRecords="false">SELECT * FROM Employees WHERE SearchNumber LIKE '#SearchNumber#%'</DatabaseQuery>
+		<GotoPage PageID="523ed390-26a0-4cb6-aefa-ba66f9eda35e" PageName="Search Results" />
+	</Page>
+	<Page ID="523ed390-26a0-4cb6-aefa-ba66f9eda35e" Description="Search Results">
+		<DatabaseQueryNextRecord />
+		<SpeakText>Are you looking for #DB.FirstName# #DB.LastName#?</SpeakText>
+		<SpeakText>Press 1 for yes.
+Press 2 for no.</SpeakText>
+		<DatabaseQueryNoMoreRecords>
+			<SpeakText>I'm sorry, but that person cannot be found. Please try again.</SpeakText>
+			<GotoPage PageID="917f2646-40de-475c-8b5d-056775745ad8" PageName="Name Search" />
+		</DatabaseQueryNoMoreRecords>
+		<DTMFEvent Digits="1">
+			<SpeakText>Please wait while I transfer your call.</SpeakText>
+		</DTMFEvent>
+		<DTMFEvent Digits="2">
+			<GotoPage PageID="523ed390-26a0-4cb6-aefa-ba66f9eda35e" PageName="Search Results" />
+		</DTMFEvent>
+	</Page>
+</IML>
