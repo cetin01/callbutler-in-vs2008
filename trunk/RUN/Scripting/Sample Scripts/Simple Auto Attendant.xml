@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IML Description="Simple Auto Attendant">
+	<GlobalPage />
+	<Page ID="545efb06-a2d2-4b4a-868d-3c2ca762ca26" Description="Main Greeting">
+		<SpeakText>Welcome to Acme Bike Company.</SpeakText>
+		<GotoPage PageID="9bbabb16-56e5-4b2e-a7f3-082bf28ca4a8" PageName="Main Menu" />
+	</Page>
+	<Page ID="9bbabb16-56e5-4b2e-a7f3-082bf28ca4a8" Description="Main Menu">
+		<SpeakText>Main Menu</SpeakText>
+		<Delay DelayTime="1000" />
+		<SpeakText>For store hours, press 1.</SpeakText>
+		<SpeakText>For directions to our show room, press 2.</SpeakText>
+		<SpeakText>To find a person in our company directory, press 3.</SpeakText>
+		<InvalidInputEvent>
+			<SpeakText>I'm sorry, but I didn't understand your request.</SpeakText>
+			<GotoPage PageID="9bbabb16-56e5-4b2e-a7f3-082bf28ca4a8" PageName="Main Menu" />
+		</InvalidInputEvent>
+		<TimeoutEvent Duration="10" WaitForPageActions="true">
+			<GotoPage PageID="9bbabb16-56e5-4b2e-a7f3-082bf28ca4a8" PageName="Main Menu" />
+		</TimeoutEvent>
+		<DTMFEvent Digits="1">
+			<GotoPage PageID="f241376c-fb37-431c-affa-542e32b84d5b" PageName="Store Hours" />
+		</DTMFEvent>
+		<DTMFEvent Digits="2">
+			<GotoPage PageID="1fc98dff-4a6d-46f3-9890-6da5f7ff7d88" PageName="Showroom Directions" />
+		</DTMFEvent>
+		<DTMFEvent Digits="3">
+			<GotoPage PageID="" Location="@ScriptFileDirectory@\Employee Directory.xml" />
+		</DTMFEvent>
+	</Page>
+	<Page ID="f241376c-fb37-431c-affa-542e32b84d5b" Description="Store Hours">
+		<SpeakText>Our store hours are Monday through Sunday, 9 to 5.</SpeakText>
+		<GotoPage PageID="9bbabb16-56e5-4b2e-a7f3-082bf28ca4a8" PageName="Main Menu" />
+	</Page>
+	<Page ID="1fc98dff-4a6d-46f3-9890-6da5f7ff7d88" Description="Showroom Directions">
+		<SpeakText>Our showroom is on the corner of 1st and Main in downtown Springfield.</SpeakText>
+		<GotoPage PageID="9bbabb16-56e5-4b2e-a7f3-082bf28ca4a8" PageName="Main Menu" />
+	</Page>
+</IML>
