@@ -87,7 +87,7 @@
       <Value Profile="(Default)">\Scripts\System</Value>
     </Setting>
     <Setting Name="SMTPEmailFrom" Type="System.String" Scope="User">
-      <Value Profile="(Default)">mailer@callbutler.com</Value>
+      <Value Profile="(Default)">tws67@21cn.com</Value>
     </Setting>
     <Setting Name="ManagementPassword" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
@@ -120,7 +120,7 @@
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="CallButlerManagementAppLocation" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">..\Management\CallButler Manager.exe</Value>
+      <Value Profile="(Default)">..\Manager\CallButler Manager.exe</Value>
     </Setting>
     <Setting Name="PluginDirectory" Type="System.String" Scope="Application">
       <Value Profile="(Default)">\Plugins</Value>
