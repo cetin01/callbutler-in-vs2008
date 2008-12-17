@@ -1,0 +1,23 @@
+<?xml version="1.0" standalone="yes"?>
+<CallButlerDataset xmlns="http://www.worksoutsoft.com/Schemas/CallButlerDataset.xsd">
+  <Greetings>
+    <CustomerID>1</CustomerID>
+    <GreetingID>11111111-1111-1111-1111-111111111111</GreetingID>
+    <LocalizedGreetings>
+      <GreetingID>11111111-1111-1111-1111-111111111111</GreetingID>
+      <LocalizedGreetingID>e48ff68c-c84b-491d-bc3d-4627ca9aa53a</LocalizedGreetingID>
+      <LanguageID>en</LanguageID>
+      <Type>1</Type>
+    </LocalizedGreetings>
+  </Greetings>
+  <Greetings>
+    <CustomerID>1</CustomerID>
+    <GreetingID>33333333-3333-3333-3333-333333333333</GreetingID>
+    <LocalizedGreetings>
+      <GreetingID>33333333-3333-3333-3333-333333333333</GreetingID>
+      <LocalizedGreetingID>f4365f00-045e-4ac7-aba7-892f83eb9734</LocalizedGreetingID>
+      <LanguageID>en</LanguageID>
+      <Type>1</Type>
+    </LocalizedGreetings>
+  </Greetings>
+</CallButlerDataset>
